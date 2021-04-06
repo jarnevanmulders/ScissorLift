@@ -22,15 +22,20 @@ title: General - docs
 email: jarne.vanmulders@kuleuven.be
 description: >- # this means to ignore newlines until "baseurl:"
   Documentation of the Techtile Scissor Lift
-baseurl: "scissorlift" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/scissorlift" # the subpath of your site, e.g. /blog
+url: "https://jarnevanmulders.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 #twitter_username: jekyllrb
-#github_username:  jekyll
+github_username:  jarnevanmulders
 
 # Build settings
-theme: minima
-plugins:
-  - jekyll-feed
+#theme: minima
+remote_theme: pmarsceill/just-the-docs
+#plugins:
+#  - jekyll-feed
+
+search_enabled: true
+
+color_scheme: "dark"
 
 # Exclude from processing.
 # The following items will not be processed, by default.
