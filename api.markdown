@@ -1,16 +1,53 @@
 ---
-layout: page
-title: api
-permalink: /api/
+#layout: page
+#title: api
+#permalink: /api/
+title: API
+has_toc: true
+#has_children: true
+nav_order: 3
+layout: default
 ---
 
 This is the API of the Techtile Robot Scissor Lift.
 
-# Gerneral functions
+# Requests
 
-| Sensor | The sensor denotes the whole sensor board. |
-| Metric | Each sensor can measure different metrics, e.g. temperature and humidity. |
-| Motherboard | All sensors are connected to the motherboard. More info [here](motherboard/). |
-| Client App  | Configures the motherboard and sensors connected to it. |
-| Web App  | . |
+| Name | Parameter | Data | Description |
+|:-:|:-:|:-:|:-:|
+| `<SL_CONNECTION_CHECK_REQ>`  | 0x01 | /   |   Check the connection     |
 
+| Name | Parameter | Data | Description |
+|:-:|:-:|:-:|:-:|
+| `<SL_CHANGE_SPEED_RPS_REQ>`  | 0x20 | 1 bytes | Set speed [Revolutions per second] |
+| `<SL_CHANGE_SPEED_SPS_REQ>`  | 0x21 | 2 bytes | Set speed [Steps per second] |
+| `<SL_CHANGE_DIR_CW_REQ>` | 0x22 | / | Change the direction to clockwise |
+| `<SL_CHANGE_DIR_CCW_REQ>` |   0x23    |   /   |   Change the direction to counterclockwise |
+| `<SL_MOVE_REV_REQ>` |   0x24    |   2 bytes   |   Move a number of revolutions |
+| `<SL_MOVE_STP_REQ>` |   0x25    |   4 bytes   |   Move a number of steps |
+
+| Name | Parameter | Data | Description |
+|:-:|:-:|:-:|:-:|
+| `<SL_STOP_REQ>` |   0x30    |   4 bytes   |   Move a number of steps |
+
+| Name | Parameter | Data | Description |
+|:-:|:-:|:-:|:-:|
+| `<SL_GETHOME_REQ>` |   0x40    |   4 bytes   |   Move a number of steps |
+
+
+# Response messages
+
+## Confirmations
+A confirmations will be given on each request message.
+
+| Name | Parameter | Description |
+|:-:|:-:|:-:|
+| `<SL_RX_MSG_CNF>` |   0xA0    |  Confirm message received |
+{: .tablelines}
+
+## Indications
+
+| Name | Parameter | Description |
+|:-:|:-:|:-:|
+| `<SL_HOME_IND>` |   0x50    | Home posistion |
+{: .tablelines}
