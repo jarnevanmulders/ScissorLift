@@ -5,9 +5,15 @@
 title: API
 has_toc: true
 #has_children: true
-nav_order: 3
+nav_order: 4
 layout: default
 ---
+
+<style>
+.tablelines table, .tablelines td, .tablelines th {
+        border: 0px solid black;
+        }
+</style>
 
 This is the API of the Techtile Robot Scissor Lift.
 
@@ -16,6 +22,7 @@ This is the API of the Techtile Robot Scissor Lift.
 | Name | Parameter | Data | Description |
 |:-:|:-:|:-:|:-:|
 | `<SL_CONNECTION_CHECK_REQ>`  | 0x01 | /   |   Check the connection     |
+{: .tablelines}
 
 | Name | Parameter | Data | Description |
 |:-:|:-:|:-:|:-:|
@@ -25,14 +32,17 @@ This is the API of the Techtile Robot Scissor Lift.
 | `<SL_CHANGE_DIR_CCW_REQ>` |   0x23    |   /   |   Change the direction to counterclockwise |
 | `<SL_MOVE_REV_REQ>` |   0x24    |   2 bytes   |   Move a number of revolutions |
 | `<SL_MOVE_STP_REQ>` |   0x25    |   4 bytes   |   Move a number of steps |
+{: .tablelines}
 
 | Name | Parameter | Data | Description |
 |:-:|:-:|:-:|:-:|
-| `<SL_STOP_REQ>` |   0x30    |   4 bytes   |   Move a number of steps |
+| `<SL_STOP_REQ>` |   0x30    |   4 bytes   |   Stop the machine now    |
+{: .tablelines}
 
 | Name | Parameter | Data | Description |
 |:-:|:-:|:-:|:-:|
-| `<SL_GETHOME_REQ>` |   0x40    |   4 bytes   |   Move a number of steps |
+| `<SL_GETPOSITION_REQ>` |   0x40    |   4 bytes   |   Ask for current posistion |
+{: .tablelines}
 
 
 # Response messages
