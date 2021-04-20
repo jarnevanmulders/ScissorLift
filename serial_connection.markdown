@@ -14,7 +14,7 @@ layout: default
 
 # Serial Connection
 
-A serial connection allows the communication between the scissor lift MCU and raspberry pi or PC. The two corresponding COM ports have to be selected and opened with a default configuration of 115200 Baud, 8 data Bits, 1 stop Bit and parity set to none (8n1).
+A serial connection allows the communication between the scissor lift MCU and raspberry pi or PC. The two corresponding COM ports have to be selected and opened with a default configuration of 1000000 Baud, 8 data Bits, 1 stop Bit and parity set to none (8n1).
 
 | Parameter    | Format |
 | ------------ | ------ |

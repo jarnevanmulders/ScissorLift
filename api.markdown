@@ -15,6 +15,21 @@ layout: default
         }
 </style>
 
+<style>
+table th:first-of-type {
+    width: 10%;
+}
+table th:nth-of-type(2) {
+    width: 10%;
+}
+table th:nth-of-type(3) {
+    width: 10%;
+}
+table th:nth-of-type(4) {
+    width: 70%;
+}
+</style>
+
 This is the API of the Techtile Robot Scissor Lift.
 
 # Requests
@@ -61,3 +76,4 @@ A confirmations will be given on each request message.
 |:-:|:-:|:-:|
 | `<SL_HOME_IND>` |   0x50    | Home posistion |
 {: .tablelines}
+
